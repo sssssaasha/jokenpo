@@ -1,4 +1,5 @@
 from random import randint
+import getpass
 print("--- Menu Jokenpô ---")
 print("1 - humano x humano")
 print("2 - humano x computador")
@@ -17,9 +18,9 @@ while menu <= 3 and menu != 4:
         round1 += 1
         print(f'--- Round {round1} ---')
         if menu == 1:
-            jogadorUm = input("Jogador um escolha pedra, papel ou tesoura: ")
-            jogadorDois = input("Jogador dois escolha pedra, papel ou tesoura: ")
-
+            jogadorUm = getpass.getpass("Jogador um escolha pedra, papel ou tesoura: ")
+            jogadorDois = getpass.getpass("Jogador dois escolha pedra, papel ou tesoura: ")
+            print("j1: ", jogadorUm, "\nj2: ", jogadorDois)
             if (jogadorUm == 'pedra' or jogadorUm == 'papel' or jogadorUm == 'tesoura') and (jogadorDois == 'pedra' or jogadorDois == 'papel' or jogadorDois == 'tesoura'):
                 if jogadorUm == 'tesoura' and jogadorDois == 'papel':
                     placarUm = placarUm + 1
