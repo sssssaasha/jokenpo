@@ -6,14 +6,12 @@ print("2 - humano x computador")
 print("3 - computador x computador")
 print("4 - sair do jogo")
 menu = int(input("Escolha o modo de jogo: "))
-placarUm = 0
-placarDois = 0
-placarTeste = 0
-placarComputador = 0
 
 while menu <= 3 and menu != 4:
 
     round1 = 0
+    placarUm = 0
+    placarDois = 0
     while menu == 1:
         round1 += 1
         print(f'--- Round {round1} ---')
@@ -48,6 +46,8 @@ while menu <= 3 and menu != 4:
             menu = int(input("Escolha o modo de jogo: "))
 
     round2 = 0
+    placarTeste1 = 0
+    placarComputador1 = 0
     while menu == 2:
         if menu == 2:
             round2 += 1
@@ -58,21 +58,21 @@ while menu <= 3 and menu != 4:
             print(itens[computador])
             if (jogadorUm == 'pedra' or jogadorUm == 'papel' or jogadorUm == 'tesoura'):
                 if jogadorUm == 'tesoura' and itens[computador] == 'papel':
-                    placarTeste = placarTeste + 1
+                    placarTeste1 = placarTeste1 + 1
                 elif jogadorUm == 'tesoura' and itens[computador] == 'pedra':
-                    placarComputador = placarComputador + 1
+                    placarComputador = placarComputador1 + 1
                 elif jogadorUm == 'pedra' and itens[computador] == 'tesoura':
-                    placarTeste = placarTeste + 1
+                    placarTeste1 = placarTeste1 + 1
                 elif jogadorUm == 'pedra' and itens[computador] == 'papel':
-                    placarComputador = placarComputador + 1
+                    placarComputador = placarComputador1 + 1
                 elif jogadorUm == 'papel' and itens[computador] == 'tesoura':
-                    placarComputador = placarComputador + 1
+                    placarComputador = placarComputador1 + 1
                 elif jogadorUm == 'papel' and itens[computador] == 'pedra':
-                    placarTeste = placarTeste + 1
+                    placarTeste1 = placarTeste1 + 1
                 else:
                     print("Empate")
             print("--- Placar ---")
-            print(f' {placarTeste} vs {placarComputador}')
+            print(f' {placarTeste1} vs {placarComputador1}')
             menu = int(input('Se gostaria de continuar digite 2, se não, digite 5: '))
             if menu != 1 and menu != 2 and menu != 3 and menu != 4:
                 print("--- Menu Jokenpô ---")
@@ -83,6 +83,8 @@ while menu <= 3 and menu != 4:
                 menu = int(input("Escolha o modo de jogo: "))
 
     round3 = 0
+    placarTeste2 = 0
+    placarComputador2 = 0
     while menu == 3:
         round3 += 1
         print(f'--- Round {round3} ---')
@@ -94,21 +96,21 @@ while menu <= 3 and menu != 4:
             print(itens[computadorDois])
 
             if itens[computadorUm] == 'tesoura' and itens[computadorDois] == 'papel':
-                placarTeste = placarTeste + 1
+                placarTeste2 = placarTeste2 + 1
             elif itens[computadorUm] == 'tesoura' and itens[computadorDois] == 'pedra':
-                placarComputador = placarComputador + 1
+                placarComputador2 = placarComputador2 + 1
             elif itens[computadorUm] == 'pedra' and itens[computadorDois] == 'tesoura':
-                placarTeste = placarTeste + 1
+                placarTeste2 = placarTeste2 + 1
             elif itens[computadorUm] == 'pedra' and itens[computadorDois] == 'papel':
-                placarComputador = placarComputador + 1
+                placarComputador2 = placarComputador2 + 1
             elif itens[computadorUm] == 'papel' and itens[computadorDois] == 'tesoura':
-                placarComputador = placarComputador + 1
+                placarComputador2 = placarComputador2 + 1
             elif itens[computadorUm] == 'papel' and itens[computadorDois] == 'pedra':
-                placarTeste = placarTeste + 1
+                placarTeste2 = placarTeste2 + 1
             else:
                 print("Empate")
         print("--- Placar ---")
-        print(f' {placarTeste} vs {placarComputador}')
+        print(f' {placarTeste2} vs {placarComputador2}')
         menu = int(input('Se gostaria de continuar digite 3, se não, digite 5: '))
         if menu != 1 and menu != 2 and menu != 3 and menu != 4:
             print("--- Menu Jokenpô ---")
