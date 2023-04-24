@@ -123,3 +123,9 @@ while menu <= 3 and menu != 4:
 
     if menu == 4:
         print("Encerrando o jokenpô...")
+        print("Muito obrigada, ")
+        print("Alex Menegatti Secco, ")
+        print("Ana Flávia Martins dos Santos, ")
+        print("Isabella Vanderlinde Berkembrock, ")
+        print("Mariana de Castro, ")
+        print("Nicole Pereira Guarnieri!")
